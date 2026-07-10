@@ -3,13 +3,13 @@ function checkAccess($page) {
     if (session_status() === PHP_SESSION_NONE) session_start();
 
     $accessRules = [
-        'cart' => [login_required => true],
-        'orders' => [login_required => true],
-        'profile' => [login_required => true],
+        'cart' => ['login_required' => true],
+        'orders' => ['login_required' => true],
+        'profile' => ['login_required' => true],
 
-        'employee' => ['roles' => [employee, admin]],
-        'admin' => ['roles' => [admin]], 
-        'admin_pizzas' => ['roles' => [admin]], 
+        'employee' => ['roles' => ['employee', 'admin']],
+        'admin' => ['roles' => ['admin']], 
+        'admin_pizzas' => ['roles' => ['admin']], 
     ];
 
     if (!isset($accessRules[$page])) {

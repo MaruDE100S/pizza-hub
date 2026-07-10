@@ -8,7 +8,6 @@ checkAccess($page);
 
 $page_path = '../public/pages/';
 
-
 include '../public/includes/header.php';
 
 switch ($page) {
@@ -47,10 +46,10 @@ switch ($page) {
 include '../public/includes/footer.php';
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PizzaHub</title>
     <link rel="stylesheet" href="../public/style/style.css">
@@ -59,4 +58,4 @@ include '../public/includes/footer.php';
    
 <script src="../js/main.js"></script>
 </body>
-</html>
+</html> -->
