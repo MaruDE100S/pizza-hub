@@ -1,7 +1,10 @@
 <?php
 require_once '../database/config.php';
+require_once '../public/includes/auth.php';
 
 $page = $_GET['page'] ?? 'home';
+
+checkAccess($page);
 
 $page_path = '../public/pages/';
 
@@ -14,6 +17,9 @@ switch ($page) {
         break;
     case 'menu':
         include $page_path.'menu.php';
+        break;
+    case 'pizza':
+        include $page_path.'pizza.php';
         break;
     case 'cart':
         include $page_path.'cart.php';
