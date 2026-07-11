@@ -18,16 +18,16 @@ function checkAccess($page) {
 
     $rule = $accessRules[$page];
 
-    if(isset($rule['login_required']) && $rule['login_required']) {
+    if(isset($rule['login_required']) && $rule['login_required'] === true) {
         if(!isset($_SESSION['user_id'])) {
-            header("Location: index.php?page=login");
+            header('Location: index.php?page=login');
             exit;
         }
     }
 
     if(isset($rule['roles'])) {
         if(!isset($_SESSION['role']) || !in_array($_SESSION['role'], $rule['roles'])) {
-            header("Location: index.php?page=home");
+            header('Location: index.php?page=home');
             exit;
         }
     }

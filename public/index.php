@@ -2,7 +2,7 @@
 require_once '../database/config.php';
 require_once '../public/includes/auth.php';
 
-$page = $_GET['page'] ?? 'home';
+$page = $_GET['page'] ?? 'Home';
 
 checkAccess($page);
 
@@ -11,31 +11,31 @@ $page_path = '../public/pages/';
 include '../public/includes/header.php';
 
 switch ($page) {
-    case 'home':
+    case 'Home':
         include $page_path.'home.php';
         break;
-    case 'menu':
+    case 'Menu':
         include $page_path.'menu.php';
         break;
-    case 'pizza':
+    case 'Pizza':
         include $page_path.'pizza.php';
         break;
-    case 'cart':
+    case 'Cart':
         include $page_path.'cart.php';
         break;
-    case 'orders':
+    case 'Orders':
         include $page_path.'orders.php';
         break;
-    case 'login':
+    case 'Login':
         include $page_path.'login.php';
         break;
-    case 'register': 
+    case 'Register': 
         include $page_path.'register.php';
         break;
-    case 'employee': 
+    case 'Employee': 
         include $page_path.'employee.php';
         break;
-    case 'admin':
+    case 'Admin':
         include $page_path.'admin.php';
         break;
     default:
@@ -45,17 +45,3 @@ switch ($page) {
 
 include '../public/includes/footer.php';
 ?>
-
-<!-- <!DOCTYPE html>
-<html lang="pl-PL">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaHub</title>
-    <link rel="stylesheet" href="../public/style/style.css">
-</head>
-<body>
-   
-<script src="../js/main.js"></script>
-</body>
-</html> -->
