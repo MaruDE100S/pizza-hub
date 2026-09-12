@@ -39,6 +39,6 @@ CREATE TABLE order_items (
     pizza_id INT,
     quantity INT,
     price_at_time DECIMAL(10, 2),
-    FOREIGN KEY (order_id) REFERENCES orders(id)
+    FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (pizza_id) REFERENCES pizzas(id)
 );

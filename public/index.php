@@ -29,10 +29,10 @@ switch ($page) {
     case 'Login':
         include $page_path.'login.php';
         break;
-    case 'Register': 
+    case 'Register':
         include $page_path.'register.php';
         break;
-    case 'Employee': 
+    case 'Employee':
         include $page_path.'employee.php';
         break;
     case 'Admin':
