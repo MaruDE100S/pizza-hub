@@ -4,6 +4,12 @@ require_once '../public/includes/auth.php';
 
 $page = $_GET['page'] ?? 'Home';
 
+if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+
 checkAccess($page);
 
 $page_path = '../public/pages/';

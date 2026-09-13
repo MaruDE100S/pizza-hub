@@ -8,21 +8,19 @@
         $password           = $_POST['password'] ?? '';
         $confirmPassword    = $_POST['password_confirmation'] ?? '';
 
-
-
         if (empty($email) || empty($phone) || empty($password)) {
             $error = "All fields needed!";
         } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $error = "Incorrect email";
+            $error = "Incorrect email!";
         } else if ($password !== $confirmPassword) {
             $error = 'Passwords don\'t match';
         } else if (strlen($password) < 6) {
-            $error = "Password must have 6 ";
+            $error = "Password must have 6 characters!";
         } else {
             $stmt = $pdo->prepare("SELECT id FROM users WHERE email = :email");
             $stmt->execute([':email' => $email]);
             if ($stmt->fetch()) {
-                $error = "Account with this email address alredy exist!";
+                $error = "Account with this email address already exist!";
             } else {
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -59,5 +57,3 @@
 
     <button type="submit">Register</button>
 </form>
-
-
