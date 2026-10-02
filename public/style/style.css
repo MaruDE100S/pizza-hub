@@ -238,4 +238,26 @@ body {
     border: 1px solid #ef4444;
 }
 
+/* Employee */
+
+.status-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;;
+}
+
+.status-select {
+    background: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--subline);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-order {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
 
