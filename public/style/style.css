@@ -1,3 +1,5 @@
+/* General styles */
+
 :root {
     --bg-main: #121214;
     --bg-surface: #1e1e24;
@@ -44,6 +46,8 @@ body {
     margin-left: auto;
     color: #ef4444;
 }
+
+/* Menu */
 
 .pizza-grid {
     display: grid;
@@ -138,3 +142,100 @@ body {
 .btn-order:active {
     transform: scale(0.96);
 }
+
+/* Orders */
+
+.order-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--subline);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--subline);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.order-date {
+    color: var(--text-sec);
+    font-size: 0.85rem;
+}
+
+.order-items-list {
+    list-style: none;
+    margin: 12px 0 16px 0;
+}
+
+.order-item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 0.95rem;
+}
+
+.order-footer {
+    border-top: 1px solid var(--subline);
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-address {
+    font-size: 0.85rem;
+    color: var(--text-sec);
+}
+
+.order-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* Status */
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.status-new {
+    background-color: #3b82f620;
+    color: #60a5fa;
+    border: 1px solid #3b82f6;
+}
+
+.status-cooking {
+    background-color: #f59e0b20;
+    color: #fbbf24;
+    border: 1px solid #f59e0b;
+}
+
+.status-ready {
+    background-color: #8b5cf620;
+    color: #a78bfa;
+    border: 1px solid #8b5cf6;
+}
+
+.status-delivered {
+    background-color: #10b98120;
+    color: #34d399;
+    border: 1px solid #10b981;
+}
+
+.status-cancelled {
+    background-color: #ef444420;
+    color: #f87171;
+    border: 1px solid #ef4444;
+}
+
+
