@@ -42,3 +42,10 @@ CREATE TABLE order_items (
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (pizza_id) REFERENCES pizzas(id)
 );
+
+INSERT INTO `pizzas` (`id`, `name`, `description`, `price`, `category`, `image_url`, `is_available`) VALUES
+(1, 'Margherita', 'Tomato sauce, fresh mozzarella, basil', 35.00, 'Classic', '../assets/images/margherita.jpg', 1),
+(2, 'Capricciosa', 'Tomato sauce, fresh mozzarella, ham, mushrooms', 42.00, 'Classic', '../assets/images/capricciosa.jpg', 1),
+(3, 'Pepperoni', 'Tomato sauce, fresh mozzarella, pepperoni', 38.00, 'Classic', '../assets/images/pepperoni.jpg', 1),
+(4, 'Four Chesse', 'Tomato sauce, fresh mozzarella, gorgonzola, provolone, parmesan', 45.00, 'Classic', '../assets/images/fourchesse.jpg', 1),
+(5, 'Veggie', 'Tomato sauce, fresh mozzarella, mushrooms, onions, peppers, olives', 40.00, 'Classic', '../assets/images/veggie.jpg', 1);

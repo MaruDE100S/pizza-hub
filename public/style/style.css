@@ -260,4 +260,54 @@ body {
     font-size: 0.85rem;
 }
 
+/* Admin Panel */
 
+.admin-section {
+    margin-bottom: 40px;
+}
+
+.admin-section-title {
+    margin-bottom: 20px;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group-flex-2 { flex: 2; }
+.form-group-flex-1 { flex: 1; }
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--subline);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--acc-color);
+}
+
+.btn-toggle {
+    text-decoration: none;
+    padding: 6px 12px;
+    display: inline-block;
+}
