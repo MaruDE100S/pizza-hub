@@ -311,3 +311,77 @@ body {
     padding: 6px 12px;
     display: inline-block;
 }
+
+/* Home */
+
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: radial-gradient(circle at center, #27272a 0%, var(--bg-main) 70%);
+    border-bottom: 1px solid var(--subline);
+    margin-bottom: 50px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-sec);
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: var(--acc-color);
+    color: white;
+    text-decoration: none;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: opacity 0.2 ease, transform 0.1 ease;
+}
+
+.btn-hero:hover {
+    opacity: 0.9;
+}
+
+.btn-hero:active {
+    transform: scale(0.97);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.feature-box {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--subline);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.feature-title {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.feature-desc {
+    color: var(--text-sec);
+    font-size: 0.9rem;
+}
+
+.bestseller-title {
+    margin-bottom: 24px;
+    text-align: center;
+}

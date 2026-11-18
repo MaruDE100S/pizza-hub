@@ -14,7 +14,8 @@ checkAccess($page);
 
 $page_path = '../public/pages/';
 
-include '../public/includes/header.php';
+include '../public/includes/head.php';
+include '../public/includes/navbar.php';
 
 switch ($page) {
     case 'Home':
