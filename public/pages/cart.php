@@ -10,6 +10,15 @@ if (isset($_GET['add'])) {
         $_SESSION['cart'][$pizzaId] = ($_SESSION['cart'][$pizzaId] ?? 0) + 1;
     }
 
+    if (isset($_GET['ajax'])) {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => true,
+            'totalItems' => array_sum($_SESSION['cart'])
+        ]);
+        exit;
+    }
+
     header('Location: index.php?page=Cart');
     exit;
 }
